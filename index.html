@@ -1,139 +1,210 @@
 <!DOCTYPE html>
 <html lang="en" class="h-screen">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwindcss</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwindcss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <body>
+    <header>
+      <div
+        class="container flex flex-col md:flex-row items-center justify-between max-md:center max-md:justify-center transition"
+      >
+        <div class="md:flex md:justify-center">
+          <strong
+            ><img
+              src="./logo.png"
+              alt="logo"
+              class="h-35 w-auto mx-auto md:block md:mx-auto"
+          /></strong>
+        </div>
 
-<body>
-  <header>
-    <div
-      class="container flex flex-col md:flex-row items-center justify-between max-md:center max-md:justify-center transition">
-      <div class="md:flex md:justify-center">
-        <strong><img src="/logo.png" alt="logo" class="h-35 w-auto mx-auto md:block md:mx-auto" /></strong>
+        <nav class="hidden md:block">
+          <ul class="flex items-center gap-4">
+            <li
+              class="font-bold hover:font-bold transform transition-transform duration-300 hover:scale-110"
+            >
+              <a href="./index.html">Home</a>
+            </li>
+
+            <li
+              class="hover:underline transform transition-transform duration-300 hover:scale-110"
+            >
+              <a href="./about.html">About us</a>
+            </li>
+
+            <li
+              class="hover:underline transform transition-transform duration-300 hover:scale-110"
+            >
+              <a href="./gallery.html">Gallery</a>
+            </li>
+
+            <li
+              class="hover:underline transform transition-transform duration-300 hover:scale-110"
+            >
+              <a href="./contact.html">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav class="md:hidden">
+          <ul class="flex items-center gap-4">
+            <li
+              class="font-bold hover:font-bold transform transition-transform duration-300 hover:scale-110"
+            >
+              <a href="./index.html">Home</a>
+            </li>
+
+            <li
+              class="hover:underline transform transition-transform duration-300 hover:scale-110"
+            >
+              <a href="./about.html">About us</a>
+            </li>
+
+            <li
+              class="hover:underline transform transition-transform duration-300 hover:scale-110"
+            >
+              <a href="./gallery.html">Gallery</a>
+            </li>
+
+            <li
+              class="hover:underline transform transition-transform duration-300 hover:scale-110"
+            >
+              <a href="./contact.html">Contact us</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </header>
+    <main>
+      <section
+        id="hero"
+        class="relative min-h-[340px] bg-cover bg-center text-white flex items-center justify-center text-center"
+        style="background-image: url('/stairs-image.jpg')"
+      >
+        <div class="absolute inset-0 bg-gray-800/50"></div>
+        <div class="relative z-10 px-4">
+          <h1 class="text-4xl lg:text-5xl font-black uppercase">
+            Together & Timeless
+          </h1>
+          <h2 class="text-xl lg:text-2xl mt-4 mb-6 max-w-3xl mx-auto">
+            Capturing genuine emotion and enduring contrast — where colors fade,
+            but stories endure.
+          </h2>
+          <a
+            href="#"
+            class="inline-block bg-white text-gray-800 font-semibold px-6 py-3 rounded hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+            >Learn More</a
+          >
+        </div>
+      </section>
 
-      <nav class="hidden md:block">
-        <ul class="flex items-center gap-4">
-          <li class="font-bold hover:font-bold transform transition-transform duration-300 hover:scale-110">
-            <a href="/index.html">Home</a>
-          </li>
-
-          <li class="hover:underline transform transition-transform duration-300 hover:scale-110">
-            <a href="/about.html">About us</a>
-          </li>
-
-          <li class="hover:underline transform transition-transform duration-300 hover:scale-110">
-            <a href="/gallery.html">Gallery</a>
-          </li>
-
-          <li class="hover:underline transform transition-transform duration-300 hover:scale-110">
-            <a href="contact.html">Contact us</a>
-          </li>
-        </ul>
-      </nav>
-
-      <nav class="md:hidden">
-        <ul class="flex items-center gap-4">
-          <li class="font-bold hover:font-bold transform transition-transform duration-300 hover:scale-110">
-            <a href="/index.html">Home</a>
-          </li>
-
-          <li class="hover:underline transform transition-transform duration-300 hover:scale-110">
-            <a href="/about.html">About us</a>
-          </li>
-
-          <li class="hover:underline transform transition-transform duration-300 hover:scale-110">
-            <a href="/gallery.html">Gallery</a>
-          </li>
-
-          <li class="hover:underline transform transition-transform duration-300 hover:scale-110">
-            <a href="contact.html">Contact us</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <section id="hero"
-      class="relative min-h-[340px] bg-cover bg-center text-white flex items-center justify-center text-center"
-      style="background-image: url('/stairs-image.jpg');">
-      <div class="absolute inset-0 bg-gray-800/50"></div>
-      <div class="relative z-10 px-4">
-        <h1 class="text-4xl lg:text-5xl font-black uppercase">Together & Timeless</h1>
-        <h2 class="text-xl lg:text-2xl mt-4 mb-6 max-w-3xl mx-auto">
-          Capturing genuine emotion and enduring contrast — where colors fade, but stories endure.
+      <section class="max-w-5xl mx-auto p-6 sm:p-12">
+        <h2 class="text-4xl sm:text-5xl font-bold mb-8 text-center">
+          Family Photography Collection
         </h2>
-        <a href="#"
-          class="inline-block bg-white text-gray-800 font-semibold px-6 py-3 rounded hover:bg-gray-100   transform transition-transform duration-300 hover:scale-110">Learn
-          More</a>
-      </div>
-    </section>
 
-    <section class="max-w-5xl mx-auto p-6 sm:p-12">
-      <h2 class="text-4xl sm:text-5xl font-bold mb-8 text-center">Family Photography Collection</h2>
+        <p class="text-lg leading-relaxed mb-6 text-center max-w-2xl mx-auto">
+          Photography is a testament to the moments we cherish most — and
+          nothing holds greater significance than family. This gallery showcases
+          a selection of candid, heartfelt images I have captured of my loved
+          ones over the years. Each photograph encapsulates connection, joy, and
+          the beauty of everyday life shared together.
+        </p>
 
-      <p class="text-lg leading-relaxed mb-6 text-center max-w-2xl mx-auto">
-        Photography is a testament to the moments we cherish most — and nothing holds greater significance than family.
-        This gallery showcases a selection of candid, heartfelt images I have captured of my loved ones over the years.
-        Each photograph encapsulates connection, joy, and the beauty of everyday life shared together.
-      </p>
+        <p class="text-lg leading-relaxed mb-12 text-center max-w-2xl mx-auto">
+          From quiet afternoons at home to vibrant celebrations and spontaneous
+          adventures, these images reflect timeless memories that continue to
+          inspire my work. I invite you to explore this collection and
+          experience the warmth that defines my approach to photography.
+        </p>
 
-      <p class="text-lg leading-relaxed mb-12 text-center max-w-2xl mx-auto">
-        From quiet afternoons at home to vibrant celebrations and spontaneous adventures, these images reflect timeless
-        memories that continue to inspire my work. I invite you to explore this collection and experience the warmth
-        that defines my approach to photography.
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="overflow-hidden rounded-xl shadow hover:scale-105 transition-transform duration-300">
-          <img src="your-photo-1.jpg" alt="Family Photo 1" class="w-full h-60 sm:h-64 object-cover" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div
+            class="overflow-hidden rounded-xl shadow hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="your-photo-1.jpg"
+              alt="Family Photo 1"
+              class="w-full h-60 sm:h-64 object-cover"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-xl shadow hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="your-photo-2.jpg"
+              alt="Family Photo 2"
+              class="w-full h-60 sm:h-64 object-cover"
+            />
+          </div>
+          <div
+            class="overflow-hidden rounded-xl shadow hover:scale-105 transition-transform duration-300"
+          >
+            <img
+              src="your-photo-3.jpg"
+              alt="Family Photo 3"
+              class="w-full h-60 sm:h-64 object-cover"
+            />
+          </div>
+          <!-- Add more photos as needed -->
         </div>
-        <div class="overflow-hidden rounded-xl shadow hover:scale-105 transition-transform duration-300">
-          <img src="your-photo-2.jpg" alt="Family Photo 2" class="w-full h-60 sm:h-64 object-cover" />
+      </section>
+    </main>
+    <footer class="w-full bg-black text-white py-8">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <!-- Logo or Name -->
+        <div class="text-lg font-semibold">
+          © 2025 <span class="text-gray-400">Petite Focus Studio</span>
         </div>
-        <div class="overflow-hidden rounded-xl shadow hover:scale-105 transition-transform duration-300">
-          <img src="your-photo-3.jpg" alt="Family Photo 3" class="w-full h-60 sm:h-64 object-cover" />
+
+        <!-- Links -->
+        <div class="flex space-x-6">
+          <a
+            href="#about"
+            class="text-gray-300 hover:text-white hover:scale-105 transition-transform duration-300"
+            >About</a
+          >
+          <a
+            href="#gallery"
+            class="text-gray-300 hover:text-white hover:scale-105 transition-transform duration-300"
+            >Gallery</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-300 hover:text-white hover:scale-105 transition-transform duration-300"
+            >Contact</a
+          >
         </div>
-        <!-- Add more photos as needed -->
-      </div>
-    </section>
-  </main>
-  <footer class="w-full bg-black text-white py-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-      <!-- Logo or Name -->
-      <div class="text-lg font-semibold">
-        © 2025 <span class="text-gray-400">Petite Focus Studio</span>
-      </div>
 
-      <!-- Links -->
-      <div class="flex space-x-6">
-        <a href="#about"
-          class="text-gray-300 hover:text-white hover:scale-105 transition-transform duration-300">About</a>
-        <a href="#gallery"
-          class="text-gray-300 hover:text-white hover:scale-105 transition-transform duration-300">Gallery</a>
-        <a href="#contact"
-          class="text-gray-300 hover:text-white hover:scale-105 transition-transform duration-300">Contact</a>
+        <!-- Socials -->
+        <div class="flex space-x-4">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="hover:text-white hover:scale-105 transition-transform duration-300"
+            >Instagram</a
+          >
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="hover:text-white hover:scale-105 transition-transform duration-300"
+            >Facebook</a
+          >
+        </div>
       </div>
-
-      <!-- Socials -->
-      <div class="flex space-x-4">
-        <a href="https://instagram.com" target="_blank"
-          class=" hover:text-white hover:scale-105 transition-transform duration-300">Instagram</a>
-        <a href="https://facebook.com" target="_blank"
-          class=" hover:text-white hover:scale-105 transition-transform duration-300">Facebook</a>
-      </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
