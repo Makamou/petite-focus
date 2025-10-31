@@ -1,0 +1,32 @@
+header {
+  height: 40px;
+  background-color: gray;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Page wrapper with flex column */
+.page-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* Main content grows to push footer down */
+body > .page-wrapper main {
+  flex: 1;
+}
+p {
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+}

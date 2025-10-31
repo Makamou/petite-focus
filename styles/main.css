@@ -1,0 +1,285 @@
+.body-content {
+  /* height: 700px; */
+  /* background-color: rgb(245, 244, 244); */
+  background: linear-gradient(to right, #f0f0f0, #828181, #f0f0f0);
+  border-top: 2px solid #555;
+}
+#hero {
+  position: relative;
+  min-height: 280px;
+  background-image: url("../images/stairs-image.jpg"); /* adjust path if needed */
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* inline */
+  z-index: 1;
+}
+
+#hero .hero-content {
+  position: relative;
+  z-index: 10;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Headings */
+#hero h1 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  #hero h1 {
+    font-size: 3rem;
+  }
+}
+
+#hero h2 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  #hero h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Hero Button */
+.hero-button {
+  display: inline-block;
+  background-color: white;
+  color: #1f2937;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.05);
+  font-weight: 700;
+}
+
+.hero-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem rgba(14, 165, 233, 0.5);
+}
+
+Section Background .gallery-section {
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #f0f0f0, #929292, #f0f0f0);
+}
+
+/* Container */
+.gallery-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Headings */
+.gallery-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .gallery-container h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Paragraphs */
+.gallery-container p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 10%;
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Photo Cards */
+.photo-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+}
+
+/* Images */
+.photo-card img {
+  width: 100%;
+  height: 250px; /* default height */
+  object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  .photo-card img {
+    height: 260px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-card img {
+    height: 270px;
+  }
+}
+
+/* About Me Section */
+.about-me {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  padding: 4rem 1rem 0rem 1rem;
+  color: #111;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Headings */
+.about-me h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.2s;
+}
+
+/* Paragraphs */
+.about-me p {
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+/* Sequential animation delays */
+.about-me p:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+.about-me p:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+.about-me p:nth-of-type(3) {
+  animation-delay: 1.2s;
+}
+.about-me p:nth-of-type(4) {
+  animation-delay: 1.6s;
+}
+
+/* Keyframes for fade-in + slide-up */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Family Photography Section */
+.family-gallery {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  color: #111;
+  font-family: Arial, sans-serif;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Headings */
+.family-gallery h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.2s;
+}
+
+/* Paragraphs */
+.family-gallery p {
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+/* Sequential animation delays */
+.family-gallery p:nth-of-type(1) {
+  animation-delay: 0.4s;
+}
+.family-gallery p:nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+
+/* Keyframes for fade-in + slide-up */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
