@@ -1,0 +1,144 @@
+/* =========================================================
+   HEADER — Refined, sticky, cinematic
+   ========================================================= */
+
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem clamp(1.25rem, 4vw, 3rem);
+  box-sizing: border-box;
+  min-height: 88px;
+}
+
+/* Logo */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left img,
+.header-left svg {
+  height: 84px;
+  width: auto;
+  color: var(--color-accent);
+  transition: transform var(--transition-base), opacity var(--transition-fast);
+  display: block;
+}
+
+.header-left img {
+  /* Legacy PNG fallback — render in pure white */
+  filter: brightness(0) invert(1);
+}
+
+.header-left:hover img,
+.header-left:hover svg {
+  transform: scale(1.04);
+  opacity: 0.88;
+}
+
+/* Navigation */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-right button {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+  transition: color var(--transition-base);
+}
+
+.header-right button::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 0.4rem;
+  height: 1px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--transition-base);
+}
+
+.header-right button:hover {
+  color: var(--color-accent);
+}
+
+.header-right button:hover::after {
+  transform: scaleX(1);
+}
+
+.header-right button:focus-visible {
+  outline: none;
+  color: var(--color-accent);
+}
+
+.header-right button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Active page — replaces the old inline black background */
+.header-right button.is-active,
+.header-right button[style*="background-color: black"] {
+  background: transparent !important;
+  color: var(--color-accent) !important;
+}
+
+.header-right button.is-active::after,
+.header-right button[style*="background-color: black"]::after {
+  transform: scaleX(1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .header-left img,
+  .header-left svg {
+    height: 72px;
+  }
+
+  .header-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1rem;
+  }
+
+  .header-right button {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+  }
+
+  .header-right button::after {
+    left: 0.65rem;
+    right: 0.65rem;
+  }
+}

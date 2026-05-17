@@ -1,0 +1,174 @@
+/* =========================================================
+   CONTACT — Minimalist dark form
+   ========================================================= */
+
+.contact-section {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-bg);
+  padding: clamp(4rem, 10vw, 7rem) var(--gutter);
+  border-top: none;
+  position: relative;
+}
+
+/* Decorative ambient gradient */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at top, rgba(255, 255, 255, 0.04), transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.02), transparent 60%);
+  pointer-events: none;
+}
+
+/* Form container */
+.contact-form {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeUp 1s var(--ease-out) 0.2s forwards;
+}
+
+/* Eyebrow above heading */
+.contact-form .eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.contact-form h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-accent);
+  margin: 0 0 1rem;
+}
+
+.contact-form h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: var(--color-text-muted);
+  margin: 1.5rem auto;
+}
+
+.contact-form > p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-text-soft);
+  line-height: 1.8;
+  margin: 0 auto 2.5rem;
+  max-width: 460px;
+}
+
+/* Email link */
+.email-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 1px;
+  transition: border-color var(--transition-fast);
+}
+
+.email-link:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 1.75rem;
+  text-align: left;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-text);
+  outline: none;
+  resize: vertical;
+  transition: border-color var(--transition-base);
+}
+
+.form-group textarea {
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--color-accent);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #555;
+}
+
+/* Submit */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.form-actions button {
+  padding: 1rem 3rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color var(--transition-base),
+    color var(--transition-base), letter-spacing var(--transition-base);
+}
+
+.form-actions button:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+  letter-spacing: 0.38em;
+}
+
+.form-actions button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
