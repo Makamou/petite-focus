@@ -28,7 +28,7 @@
 
 .header-left img,
 .header-left svg {
-  height: 84px;
+  height: 110px;
   width: auto;
   color: var(--color-accent);
   transition: transform var(--transition-base), opacity var(--transition-fast);
